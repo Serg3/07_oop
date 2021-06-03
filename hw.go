@@ -2,24 +2,20 @@ package hw
 
 import (
 	"fmt"
-	"math"
+	. "math"
 )
 
 // По условиям задачи, координаты не могут быть меньше 0.
 
 type Geom struct {
-	X1, Y1, X2, Y2 float64
+	x1, y1, x2, y2 float64
 }
 
-func (geom Geom) CalculateDistance() (distance float64) {
-
-	if geom.X1 < 0 || geom.X2 < 0 || geom.Y1 < 0 || geom.Y2 < 0 {
+func (g Geom) Distance() float64 {
+	if g.x1 < 0 || g.x2 < 0 || g.y1 < 0 || g.y2 < 0 {
 		fmt.Println("Координаты не могут быть меньше нуля")
 		return -1
-	} else {
-		distance = math.Sqrt(math.Pow(geom.X2-geom.X1, 2) + math.Pow(geom.Y2-geom.Y1, 2))
 	}
-
 	// возврат расстояния между точками
-	return distance
+	return Sqrt(Pow(g.x2-g.x1, 2) + Pow(g.y2-g.y1, 2))
 }
