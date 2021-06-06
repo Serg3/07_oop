@@ -10,17 +10,19 @@ func TestGeom_Distance(t *testing.T) {
 	}{
 		{
 			name:         "#1",
-			geom:         Geom{x1: 1, y1: 1, x2: 4, y2: 5},
+			geom:         Geom{X1: 1, Y1: 1, X2: 4, Y2: 5},
 			wantDistance: 5,
 		},
+		// * added edge case test
 		{
 			name:         "#2",
-			geom:         Geom{x1: 0, y1: 0, x2: 0, y2: 0},
+			geom:         Geom{X1: 0, Y1: 0, X2: 0, Y2: 0},
 			wantDistance: 0,
 		},
+		// * added edge case test
 		{
 			name:         "#3",
-			geom:         Geom{x1: 1, y1: 1, x2: -4, y2: 5},
+			geom:         Geom{X1: 1, Y1: 1, X2: -4, Y2: 5},
 			wantDistance: -1,
 		},
 	}
