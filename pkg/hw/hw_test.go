@@ -22,8 +22,8 @@ func TestGeom_Distance(t *testing.T) {
 		// * added edge case test
 		{
 			name:         "#3",
-			geom:         Geom{X1: 1, Y1: 1, X2: -4, Y2: 5},
-			wantDistance: -1,
+			geom:         Geom{X1: -1, Y1: -1, X2: -4, Y2: -5},
+			wantDistance: 5,
 		},
 	}
 	for _, tt := range tests {
