@@ -3,11 +3,11 @@ package main
 
 import (
 	"fmt"
-	"go_core/07_oop/pkg/hw"
+	"go_core/07_oop/pkg/geom"
 )
 
 func main() {
-	g := hw.Geom{}
+	g := geom.Coords{}
 
 	g.X1, g.Y1, g.X2, g.Y2 = 1, 1, 4, 5
 	calc(g)
@@ -19,7 +19,7 @@ func main() {
 	calc(g)
 }
 
-func calc(g hw.Geom) {
+func calc(g geom.Coords) {
 	// * the task condition was moved from the package to the executable program
 	if g.X1 < 0 || g.X2 < 0 || g.Y1 < 0 || g.Y2 < 0 {
 		fmt.Println("Coordinates can't be less than 0")
